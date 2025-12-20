@@ -1,9 +1,9 @@
 NICHE_CONFIG = {
-"niche": "why working at AWS is great",
-"audience": "18-35",
-"tone": "angry, sarcastic",
-"video_length_seconds": 15,
-"cta": "Follow for more work loving content",
+"niche": "animal memes",
+"audience": "10-15",
+"tone": "outlandish, slightly mysterious",
+"video_length_seconds": 25,
+"cta": "Follow for more brainrot content",
 }
 
 
@@ -11,11 +11,12 @@ OLLAMA_MODEL = "mistral"
 
 
 PATHS = {
-"ideas": "data/ideas/idea.txt",
-"script": "data/scripts/script.txt",
-"audio": "data/audio/voice.wav",
-"subs": "data/subtitles/subs.srt",
-"video": "data/videos/final.mp4",
-"bg": "data/visuals/bg.mp4",
-"caption": "data/captions/caption.txt",
+    "ideas": "data/ideas/idea.txt",
+    "script": "data/scripts/script.txt",
+    "scenes": "data/scenes/scenes.json",
+    "images": "data/images",
+    "audio": "data/audio/voice.wav",
+    "subs": "data/subtitles/subs.srt",
+    "video": "data/video/final.mp4",
+    "caption": "data/captions/caption.txt",
 }

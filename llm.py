@@ -1,8 +1,7 @@
+from pathlib import Path
 import subprocess
-from unittest import result
-
-from click import prompt
-from config import NICHE_CONFIG, OLLAMA_MODEL
+import json
+from config import NICHE_CONFIG, OLLAMA_MODEL, PATHS
 
 
 
@@ -65,4 +64,19 @@ Write a short TikTok caption for this niche: {NICHE_CONFIG['niche']}.
 Include exactly 3 hashtags.
 No emojis.
 """
+    return run_llm(prompt)
+
+def generate_scene_descriptions():
+    script_path = Path(PATHS["script"])
+    if not script_path.exists():
+        raise FileNotFoundError(f"Script file not found: {script_path}")
+    script_text = script_path.read_text()
+
+    prompt = (
+        f"Given the following TikTok script, generate a short scene description "
+        f"for visuals. Output only the text.\n\n"
+        f"Script:\n{script_text}"
+    )
+
+    # Run Ollama
     return run_llm(prompt)
